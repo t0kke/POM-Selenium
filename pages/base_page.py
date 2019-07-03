@@ -29,7 +29,7 @@ class BasePage(object):
         alert.send_keys(answer)
         alert.accept()
         try:
-            WebDriverWait(self.browser, 3).until(EC.alert_is_present())
+            #WebDriverWait(self.browser, 3).until(EC.alert_is_present())
             alert = self.browser.switch_to.alert
             print("Your code: {}".format(alert.text))
             alert.accept()
