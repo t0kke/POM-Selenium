@@ -8,11 +8,12 @@ class MainPageLocators(object):
 class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini  a.btn-default")
 
 
 class LoginPageLocators(object):
-    REG_FORM = (By.CSS_SELECTOR, "id_registration-email")
-    LOGIN_FORM = (By.CSS_SELECTOR, "id_login-username")
+    REG_FORM = (By.CSS_SELECTOR, "input#id_registration-email")
+    LOGIN_FORM = (By.CSS_SELECTOR, "input#id_login-username")
 
 
 class ProductPageLocators(object):
@@ -21,4 +22,10 @@ class ProductPageLocators(object):
     PRICE_BOOK = (By.CSS_SELECTOR, "div.product_main > p.price_color")
     ALERT_TITLE_BOOK = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
     ALERT_PRICE_BOOK = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+
+
+class BasketPageLocators(object):
+    BASKET_ITEMS = (By.CSS_SELECTOR, "div.basket-items")
+    MESS_BASKET_EMPTY = (By.CSS_SELECTOR, "div#content_inner p")
+
 
